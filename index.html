@@ -1,0 +1,3300 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Éolienne</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <style>
+
+a 
+{
+
+    margin-bottom: 20px;
+
+}
+html, body 
+{
+
+  margin: 0;
+  
+  padding: 0;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  scroll-behavior: smooth;
+  
+  width: 100%;
+  
+  max-width: 100%;
+  
+  overflow-x: hidden;
+
+}
+
+h2 
+{
+
+  text-align: center;
+  
+}
+
+p
+{
+
+  text-align: center;
+  
+}
+
+/* Thème couleur */
+:root 
+{
+
+  --primary-color: #00a08c;
+  
+  --secondary-color: #3498db;
+  
+  --dark-color: #1a1a2e;
+
+  --black-color: #000000;
+  
+  --light-color: #f1f1f1;
+  
+  --accent-color: #ffcc00;
+  
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Arrière-plan amélioré */
+
+
+body 
+{
+  
+
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  
+  background-size: 400% 400%;
+  
+  animation: gradientBG 15s ease infinite;
+  
+  color: var(--light-color);
+  
+  line-height: 1.6;
+  
+  min-height: 100vh;
+
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* En-tête */
+header {
+  background: rgba(26, 26, 46, 0.9);
+
+  text-align: center;
+
+  position: relative;
+
+  width: 100%;
+
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+
+  padding-bottom: 20px;
+}
+
+header h4 {
+  color: var(--accent-color);
+
+  margin: 0;
+
+  padding: 20px;
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-top: 20px;
+}
+
+header a 
+{
+
+    padding: 20px;
+
+}
+
+nav a {
+  color: var(--light-color);
+
+  text-decoration: none;
+
+  margin: 0 1rem;
+
+  font-size: 1.1rem;
+
+  transition: all 0.3s ease;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 4px;
+
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenu principal */
+main {
+  padding: 7rem 2rem 2rem;
+
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+article, section 
+{
+
+  margin-bottom: 3rem;
+
+}
+
+
+h4 
+{
+  
+  color: var(--accent-color);
+ 
+  margin-top: 0;
+
+}
+
+h2
+{
+  
+  color: var(--accent-color);
+
+  margin-top: 0;
+
+}
+
+h1
+{
+
+  color: var(--accent-color);
+  
+  margin-top: 0;
+
+}
+
+h3
+{
+  
+  color: var(--accent-color);
+  
+  margin-top: 0;
+
+}
+
+h1 
+{
+
+  font-size: 2.5rem;
+  
+  margin-bottom: 1.5rem;
+  
+  position: relative;
+  
+  display: inline-block;
+
+}
+
+h1::after 
+{
+
+  content: '';
+  
+  position: absolute;
+  
+  bottom: -10px;
+  
+  left: 0;
+  
+  width: 100%;
+  
+  height: 3px;
+  
+  background: var(--secondary-color);
+  
+  transform: scaleX(0);
+  
+  transform-origin: right;
+  
+  transition: transform 0.3s ease;
+
+}
+
+h1:hover::after 
+{
+
+  transform: scaleX(1);
+  
+  transform-origin: left;
+
+}
+
+h2 
+{
+
+  font-size: 2rem;
+  
+  margin-bottom: 1rem;
+  
+  padding-bottom: 0.5rem;
+  
+  border-bottom: 2px solid var(--primary-color);
+
+}
+
+h3 
+{
+
+  font-size: 1.5rem;
+  
+  margin-bottom: 1rem;
+
+}
+
+
+p 
+{
+
+  margin-bottom: 1rem;
+  
+  font-size: 1.1rem;
+
+}
+
+
+/* Sections spéciales */
+
+/* Sections spéciales */
+
+.feature, .community-item 
+{
+
+  background: rgba(0, 160, 140, 0.2);
+
+  border: 1px solid var(--primary-color);
+
+  border-radius: 8px;
+
+  padding: 1.5rem;
+
+  margin: 1rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow: var(--shadow);
+}
+
+.feature:hover, .community-item:hover 
+{
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 160, 140, 0.3);
+
+  background: rgba(0, 160, 140, 0.3);
+}
+
+.features, .community 
+{
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+/* Section des capteurs */
+
+.sensor-data
+{
+  background: rgba(26, 26, 46, 0.7);
+
+  border-radius: 8px;
+
+  padding: 2rem;
+
+  margin: 2rem 0;
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(0, 160, 140, 0.3);
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.sensor-data table 
+{
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-bottom: 1.5rem;
+}
+
+.sensor-data th, .sensor-data td 
+{
+
+  padding: 1rem;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pied de page */
+
+footer 
+{
+  background: var(--dark-color);
+
+  color: var(--light-color);
+
+  text-align: center;
+
+  padding: 1rem;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) 
+{
+  main 
+  {
+    width: 95%;
+
+    padding: 6rem 1rem 1rem;
+
+    margin-left: 0;
+  }
+  
+  p 
+  {
+
+    padding-left: 0;
+
+  }
+  
+  .sensor-data table
+  {
+    display: block;
+
+    overflow-x: auto;
+  }
+
+}
+
+table
+{
+
+   margin-left: 100px;
+  
+}
+
+tr
+{
+
+  width: 750px;
+  
+}
+
+thead
+{
+
+  width: 750px;
+  
+}
+
+tbody
+{
+
+  width: 750px;
+  
+}
+
+th
+{
+
+  max-width: 400px;
+  
+}
+
+.sensor-data th, .sensor-data td 
+{
+  padding: 1rem;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sensor-data th 
+{
+  background: rgba(0, 160, 140, 0.2);
+
+  color: var(--accent-color);
+
+  font-weight: 600;
+
+}
+
+.sensor-data tr:hover
+{
+
+  background: rgba(0, 160, 140, 0.1);
+
+}
+
+.value 
+{
+  font-family: 'Courier New', monospace;
+
+  font-size: 1.1rem;
+
+  color: var(--accent-color);
+
+  font-weight: 600;
+}
+
+.sensor-footer 
+{
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.refresh-btn 
+{
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.refresh-btn:hover 
+{
+
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+
+}
+
+.auto-refresh 
+{
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  cursor: pointer;
+}
+
+.auto-refresh input
+{
+  width: auto;
+
+  margin: 0;
+}
+
+#timestamp 
+{
+  color: var(--accent-color);
+
+  font-weight: 600;
+}
+
+/* Pied de page */
+
+footer 
+{
+  background: var(--dark-color);
+
+  color: var(--light-color);
+
+  text-align: center;
+
+  width: 1425px;
+
+  margin-top: 3rem;
+}
+
+/* Animations */
+
+@keyframes fadeIn 
+{
+  from { opacity: 0; transform: translateY(20px); }
+
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float 
+{
+  0% { transform: translateY(0px); }
+
+  50% { transform: translateY(-10px); }
+
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) 
+{
+  header 
+  {
+    flex-direction: column;
+
+    padding: 1rem;
+  }
+  
+  nav 
+  {
+    margin-top: 10px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+  
+  nav a 
+  {
+
+    margin: 0.5rem;
+
+  }
+  
+  .features, .community 
+  {
+
+    flex-direction: column;
+
+  }
+  
+  .feature, .community-item 
+  {
+    max-width: 100%;
+
+    margin: 1rem 0;
+  }
+  
+  main 
+  {
+
+    padding: 6rem 1rem 1rem;
+
+  }
+  
+  form 
+  {
+
+    padding: 1rem;
+
+  }
+
+}
+  
+  footer
+  {
+    background-color: #000000;
+
+    text-align: center;
+
+    padding-top: 10px;
+
+    padding-bottom: 10px;
+
+    position: relative;
+
+    bottom: 0;
+
+    width: 100%;
+}
+
+html, body 
+{
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+body 
+{
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+main 
+{
+  flex: 1;
+
+  padding-bottom: 0;
+
+}
+        
+/* Conteneur des features */
+
+.features
+{
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  margin: 2rem 0;
+}
+
+/* Styles pour chaque feature */
+
+.feature 
+{
+  background: rgba(0, 160, 140, 0.2);
+
+  border: 1px solid var(--primary-color);
+
+  border-radius: 8px;
+
+  padding: 1.5rem;
+
+  margin: 0.5rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow: var(--shadow);
+
+  flex: 1;
+
+  min-width: 300px;
+
+  box-sizing: border-box;
+}
+
+.feature:hover 
+{
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 160, 140, 0.3);
+
+  background: rgba(0, 160, 140, 0.3);
+}
+
+/* Responsive pour petits écrans */
+
+@media (max-width: 100%) 
+{
+  .features 
+  {
+
+    flex-direction: column;
+
+  }
+  
+  .feature 
+  {
+    min-width: 100%;
+
+    margin: 0.5rem 0;
+  }
+}
+
+p
+{
+
+  padding-left: 75px;
+  
+}
+
+
+         label 
+         {
+                 
+                    display: block;
+                    
+                    margin-bottom: 10px;
+                    
+                    font-size: 1.1rem;
+                    
+                    color: white;
+                }
+
+                        textarea 
+        {
+    
+                    width: 100%;
+                    
+                    padding: 10px;
+                    
+                    margin-bottom: 20px;
+                    
+                    border: none;
+                    
+                    border-radius: 5px;
+                    
+                    background: rgba(255, 255, 255, 0.1);
+                    
+                    color: #fff;
+                }
+
+
+                /* Style pour le formulaire de contact */
+
+.contact-form-container 
+{
+  background: rgba(26, 26, 46, 0.8);
+
+  border-radius: 15px;
+
+  padding: 2rem;
+
+  margin: 2rem auto;
+
+  max-width: 652px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  border: 1px solid var(--primary-color);
+
+  animation: fadeIn 1s ease-out;
+}
+
+.form-group input,
+
+.form-group select,
+
+.form-group textarea 
+{
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+}
+
+.contact-form-container 
+{
+
+  max-width: 652px;
+
+}
+
+.form-group 
+{
+
+  width: 100%;
+
+}
+
+.form-group input
+{
+  width: 652px;
+
+  padding: 12px 15px 12px 40px;
+
+  border: 2px solid rgba(0, 160, 140, 0.3);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  font-size: 1rem;
+
+  transition: all 0.3s ease;
+
+}
+
+.contact-form-container h3 
+{
+  color: var(--accent-color);
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+
+  font-size: 1.8rem;
+
+}
+
+.styled-form 
+{
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.form-group 
+{
+
+  position: relative;
+
+}
+
+.form-group label 
+{
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: var(--light-color);
+
+  font-size: 1.1rem;
+
+  transition: all 0.3s ease;
+}
+
+.form-group textarea 
+{
+
+  width: 100%;
+  
+  padding: 12px 15px 12px 40px;
+  
+  border: 2px solid rgba(0, 160, 140, 0.3);
+  
+  border-radius: 8px;
+  
+  background: rgba(255, 255, 255, 0.05);
+  
+  color: white;
+  
+  font-size: 1rem;
+  
+  transition: all 0.3s ease;
+
+}
+
+.form-group select
+{
+
+  width: 100%;
+  
+  padding: 12px 15px 12px 40px;
+  
+  border: 2px solid rgba(0, 160, 140, 0.3);
+  
+  border-radius: 8px;
+  
+  background: rgba(255, 255, 255, 0.05);
+  
+  color: black;
+  
+  font-size: 1rem;
+  
+  transition: all 0.3s ease;
+
+}
+
+.form-group select 
+{
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  padding-right: 30px;
+
+}
+
+.form-group textarea 
+{
+  padding: 15px;
+
+  min-height: 150px;
+
+  resize: vertical;
+
+}
+
+.form-group input:focus,
+
+.form-group select:focus,
+
+.form-group textarea:focus 
+{
+  outline: none;
+
+  border-color: var(--primary-color);
+
+  box-shadow: 0 0 0 3px rgba(0, 160, 140, 0.2);
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+.input-icon
+{
+  position: absolute;
+
+  left: 15px;
+
+  top: 40px;
+
+  font-size: 1.2rem;
+
+  color: var(--primary-color);
+
+}
+
+.submit-btn
+{
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+
+  color: white;
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 8px;
+
+  font-size: 1.1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 1rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 15px rgba(0, 160, 140, 0.4);
+
+}
+
+.submit-btn:hover 
+{
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 20px rgba(0, 160, 140, 0.6);
+}
+
+.btn-text 
+{
+
+  transition: all 0.3s ease;
+
+}
+
+.submit-btn:hover .btn-text 
+{
+
+  letter-spacing: 1px;
+
+}
+
+.btn-icon 
+{
+
+  transition: all 0.3s ease;
+
+}
+
+.submit-btn:hover .btn-icon 
+{
+
+  transform: rotate(45deg);
+
+}
+
+     .gallery-item 
+     {
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+    
+    .gallery-item:hover
+    {
+        transform: scale(1.1);
+
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    }
+    
+    .lightbox.show 
+    {
+        display: flex;
+
+        opacity: 1;
+
+    }
+
+     .feature:hover 
+     {
+        transform: scale(1.05);
+
+        transition: transform 0.3s ease;
+
+    }
+
+     .community-item:hover 
+     {
+        transform: scale(1.05);
+
+        transition: transform 0.3s ease;
+
+    }
+    
+        .gallery 
+    {
+            display: flex;
+
+            justify-content: space-around;
+
+            flex-wrap: wrap;
+
+            margin-top: 40px;
+
+            border: 5px, black;
+
+        }
+        
+        .gallery-item 
+        {
+            width: 30%;
+
+            margin: 10px;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            animation: fadeInUp 2.5s ease;
+
+        }
+
+    .lightbox 
+    {
+        display: none;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.8);
+
+        justify-content: center;
+
+        align-items: center;
+
+        z-index: 1000;
+    }
+    
+    .lightbox.show 
+    {
+        display: flex;
+
+        opacity: 1;
+    }
+    
+    .lightbox-content 
+    {
+        max-width: 150%;
+
+        max-height: 150%;
+
+        z-index: 1001;
+    }
+    
+    .close 
+    {
+        position: absolute;
+
+        top: 20px;
+
+        right: 30px;
+
+        color: white;
+
+        font-size: 50px;
+
+        cursor: pointer;
+
+        z-index: 1002;
+    }
+
+</style>  
+  
+<body>
+
+    <header>
+
+      <h4>
+
+        Projet éolienne
+
+      </h4>
+      
+            <nav>
+
+        <a href="#requierment">Exigences
+
+        </a>
+
+        <a href="#why">Pourquoi_ce_projet?
+
+        </a>
+
+        <a href="#gallery">Galerie
+
+        </a>
+
+        <a href="#contact">Contact
+
+        </a>
+
+    </nav>
+
+</header>
+
+ <main>
+
+      <article>
+
+        <h2>
+
+          Pourquoi ce site ?
+
+        </h2>
+
+        <p>
+
+          Ce site a été créé pour que des personnes prennent
+
+        </p>
+
+        <p>
+
+          conaissance de notre projet et puissent nous 
+
+        </p>
+
+        <p>
+
+          soutenir pendant cette courte période...
+
+          </p>
+
+        <section id="requierment">
+
+          <div class="requierment">
+
+        <h2>
+
+          Exigences de l'éolienne
+
+        </h2>
+
+        <p>
+
+          - Pour construire l'éolienne, il y a plein d'exigences
+
+        </p>
+
+        <p>
+
+        comme au niveau de la taille, du circuit électrique ou
+
+        </p>
+
+        <p>
+
+            encore du type et de la puissance qui sera produite.
+        </p>
+
+        <p>
+
+        Il y a aussi des exigences au niveau des enjeux du
+
+        </p>
+
+        <p>
+
+          developpement durable et de l'écologie pour
+
+        </p>
+
+        <p>
+
+            réduire le réchauffement climatique de notre monde.
+
+        </p>
+
+        <br>
+
+      </article>
+
+    </main>
+
+    <h2>
+
+        Quel est le type d'éolienne choisit  ?
+
+      </h2>
+
+      <p>
+
+        Notre éolienne aura 6 pales, un moyeu,
+
+    </p>
+
+    <p>
+
+         un mât qui sera intégré dans le socle,
+
+        </p>
+
+        <p>
+
+        il y aura aussi une boite moteur avec le
+
+      </p>
+
+      <p>
+
+        moteur "nema" qui tournera en mode générateur.
+
+      </p>
+
+    <section id="why">
+
+      <div class="why">
+
+    <h2>
+
+      Pourquoi ce projet?
+
+    </h2>
+
+      <p>
+
+        Ce projet est donné par le professeur d'inovation technologie
+
+    </p>
+
+    <p>
+
+        et par le professeur de I2D-EE dans le cadre d'un projet
+
+      </p>
+
+    <p>
+
+        en classe de première STI2D où nous devons en groupes de 5, 
+
+    </p>
+
+    <p>
+
+        inventer, construire et faire fonctionner une éolienne qui  
+
+      </p>
+
+        <p>
+
+        peut charger un téléphone en courant continu de puissance 15 W
+
+      </p>
+
+     <h2>
+
+        Nos acompagnateurs
+
+     </h2>
+
+     <p>
+
+         Durant ce projet, le professeur d'IT (inovation technologique)
+
+        </p>
+
+        <p>
+
+         et le professeur de I2D-EE (énergie environement),
+
+        </p>
+
+        <p>
+
+        mais aussi le lycée et les autres groupes pouront nous
+      </p>
+
+        <p>
+
+         apporter de l'aide dans la réalisation du projet comme 
+
+        </p>
+
+        <p>
+
+         dans des suggestions suplémentaires... Mais les personnes 
+
+        </p>
+
+        <p>
+
+         voyant ce site peuvent nous aider en nous envoyant un mail 
+
+        </p>
+
+        <p>
+
+         avec leurs idées...
+
+     </p>
+
+      <section id="features">
+
+        <h2>
+
+          Le projet en trois étapes
+
+        </h2>
+
+        <div class="features">
+
+          <div class="feature">
+
+              <h3>
+
+                1ère étape
+
+              </h3>
+
+              <p>
+
+                Etablissement d'un cahier des charges pour définir
+
+            </p>
+
+            <p>
+
+                le projet global mais aussi pour que le résultat final
+
+            </p>
+
+            <p>
+
+                corresponde aux attentes des professeurs.
+
+              </p>
+
+          </div>
+
+          <div class="feature">
+
+              <h3>
+
+                2ème étape
+
+              </h3>
+
+              <p>
+
+                Réalisation du code du site qui est en html, css et javascripte.
+
+            </p>
+
+            <p>
+
+                 Réalisation de l'éolienne tout en veillant bien à respecter le
+
+                </p>
+
+                <p>
+                 
+                 cahier des charges établi au début du projet.
+
+                </p>
+
+          </div>
+
+          <div class="feature">
+
+              <h3>
+
+                3ème étape
+
+              </h3>
+
+              <p>
+
+                Présentation du projet aux professeurs mais aussi aux
+
+            </p>
+
+            <p>
+
+                élèves ainsi que mise en fonctionement de l'éolienne.
+
+              </p>
+
+          </div>
+
+       </div>
+
+      </section>
+
+      <br>
+
+    <h2>
+
+      Voici le design envisagé pour la structure de l'éolienne dans cette Galerie :
+
+  </h2>
+
+  <h6>
+
+    <section id="gallery">
+
+        <div class="gallery">
+
+            <img src="immage1.1.jpg" alt="Description de l'image 1.1" class="gallery-item">
+
+            <img src="immage1.2.jpg" alt="Description de l'image 1.2" class="gallery-item">
+
+            <img src="immage1.3.jpg" alt="Description de l'image 1.3" class="gallery-item">
+
+        </div>
+
+ </h6>
+
+            <h2>
+
+                Voici le design envisagé pour la partie centrale de l'éolienne :
+
+            </h2>
+
+ <h6>
+
+         <div class="gallery">
+
+            <img src="immage2.1.jpg" alt="Description de l'image 2.1" class="gallery-item">
+
+            <img src="immage2.2.jpg" alt="Description de l'image 2.2" class="gallery-item">
+
+            <img src="immage2.3.jpg" alt="Description de l'image 2.3" class="gallery-item">
+
+         </div>
+
+ </h6>
+    
+        <div class="lightbox" id="lightbox">
+
+            <span class="close">&times;</span>
+
+            <img class="lightbox-content" id="lightbox-img">
+
+        </div>
+
+    </section>
+
+ </h6>
+
+ <section id="features">
+
+  <h2>
+
+    Fonctionnalités de ce site
+
+  </h2>
+
+  <div class="features">
+
+      <div class="feature">
+
+          <h3>
+
+            Actualités :
+
+          </h3>
+
+          <p>
+
+            Restez informé de la production d'énergie en temps
+
+        </p>
+
+        <p>
+
+            réel de notre éolienne faite sur-mesure.
+
+          </p>
+
+      </div>
+
+      <div class="feature">
+
+          <h3>
+
+            Informations sur le types de production :
+
+          </h3>
+
+          <p>
+
+            Découvrez toutes les informations de la production 
+
+        </p>
+
+        <p>
+
+            comme la puissance, la tension et même la vitesse de rotation.
+
+        </p>
+
+      </div>
+
+      <div class="feature">
+
+          <h3>
+
+            Le matériel fourni par l'établissement :
+
+          </h3>
+
+          <p>
+
+            on ne sais pas trop quel sera le matériel   
+
+        </p>
+
+        <p>
+
+           fourni par l'établissement, mais a priori,
+
+        </p>
+
+        <p>
+
+             il y aura du bois, du pvc, des composants électroniques... 
+
+            </p>
+
+            <p>
+
+            Le reste doit être fait par nos propres moyens...
+
+           </p>
+
+      </div>
+
+  </div>
+
+</section>
+
+<br>
+
+ <br>
+
+  <section id="contact">
+
+    <div class="contact">
+
+    </div>
+
+    <h2>
+
+      Pour des questions, contactez-nous
+
+    </h2>
+
+        <p>
+
+        <esection>
+
+        <form id="contactForm">
+
+<div class="contact-form-container">
+
+    <h3>
+        
+        Envoyez-nous un message
+    
+    </h3>
+
+    <form id="contactForm" class="styled-form">
+
+      <div class="form-group">
+
+        <label for="nom">Votre nom
+
+        </label>
+
+        <input type="text" id="nom" name="nom" required placeholder="Ex: Jean Dupont">
+
+        <span class="input-icon">👤
+
+        </span>
+
+      </div>
+      
+      <div class="form-group">
+
+        <label for="email">Votre email
+
+        </label>
+
+        <input type="email" id="email" name="email" required placeholder="Ex: exemple@email.com">
+
+        <span class="input-icon">✉️
+
+        </span>
+
+      </div>
+      
+      <div class="form-group">
+
+        <label for="destinataire">Destinataire
+
+        </label>
+
+        <select id="destinataire" name="destinataire" required>
+
+          <option value="" disabled selected>Sélectionnez un membre
+
+          </option>
+
+          <option value="lucas">Lucas Porceillon
+
+          </option>
+
+          <option value="oian">Oian Puaux
+
+          </option>
+
+          <option value="angel">Angel Roussel
+
+          </option>
+
+          <option value="ange">Ange Roques
+
+          </option>
+
+          <option value="ethan">Ethan Tavan
+
+          </option>
+
+        </select>
+
+        <span class="input-icon">👇
+
+        </span>
+
+      </div>
+      
+      <div class="form-group">
+
+        <label for="message">Votre message
+
+        </label>
+
+        <textarea id="message" name="message" rows="5" required placeholder="Dites-nous tout...">
+
+        </textarea>
+
+      </div>
+      
+      <button type="submit" class="submit-btn">
+
+        <span class="btn-text">Envoyer le message
+
+        </span>
+
+        <span class="btn-icon">🚀
+
+        </span>
+
+      </button>
+
+    </form>
+
+</div>
+
+        </form>
+
+        </esection>
+
+    </p>
+
+        </form>
+
+    </section>
+
+    <br>
+
+    <br>
+                  
+    <br>
+
+    <h2>
+
+        Problèmes conçernant les questions :
+
+    </h2>
+
+    <p>
+
+        si vous êtes amenés à rencontrer des problèmes au
+
+    </p>
+
+    <p>
+        
+        nivau du formulaire de questions, vous pouvez
+        
+    </p>
+
+    <p>
+        
+        envoyer un e-mail à l'une des cinq adresses mail suivantes 
+        
+    </p>
+
+    <p>
+        
+        via le lien-hypertexte nomé Email :
+        
+    </p>
+
+    <p>
+        
+        - lucas.porceillon@stlouis26-e.eu
+
+    </p>
+
+      <p>
+
+       - oian.puaux@stlouis26-e.eu
+
+      </p>
+
+            <p>
+
+       - angel.roussel@stlouis26-e.eu
+      </p>
+
+            <p>
+
+       - ange.roques@stlouis26-e.eu
+
+      </p>
+
+            <p>
+
+
+       - ethan.tavan@stlouis26-e.eu
+
+      </p>
+
+    <br>
+
+      <h2>
+
+        <ul>
+
+          <a href="https://mail.google.com/mail/u/0/#inbox">Email
+
+          </a>
+
+          </h2>
+
+        </ul>
+
+        </div>
+
+  </section>
+  
+  </main>
+  
+  <br>
+
+    <footer>
+
+      <p>
+        
+        &copy; 2025 projet éolienne. Tous droits réservés.
+    
+    </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function updateSensorData() {
+        fetch('/data')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('busVoltage').textContent = data.busVoltage.toFixed(3);
+            document.getElementById('shuntVoltage').textContent = data.shuntVoltage.toFixed(3);
+            document.getElementById('loadVoltage').textContent = data.loadVoltage.toFixed(3);
+            document.getElementById('current').textContent = data.current.toFixed(2);
+            document.getElementById('power').textContent = data.power.toFixed(2);
+            const now = new Date();
+            document.getElementById('timestamp').textContent = now.toLocaleTimeString();
+          });
+      }
+      
+      // Actualisation automatique toutes les 5 secondes
+      setInterval(updateSensorData, 5000);
+      updateSensorData(); // Chargement initial
+    </script>
+
+  <style>
+
+a 
+{
+
+    margin-bottom: 20px;
+
+}
+html, body 
+{
+
+  margin: 0;
+  
+  padding: 0;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  scroll-behavior: smooth;
+  
+  width: 100%;
+  
+  max-width: 100%;
+  
+  overflow-x: hidden;
+
+}
+
+h2 
+{
+
+  text-align: center;
+  
+}
+
+p
+{
+
+  text-align: center;
+  
+}
+
+/* Thème couleur */
+:root 
+{
+
+  --primary-color: #00a08c;
+  
+  --secondary-color: #3498db;
+  
+  --dark-color: #1a1a2e;
+
+  --black-color: #000000;
+  
+  --light-color: #f1f1f1;
+  
+  --accent-color: #ffcc00;
+  
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Arrière-plan amélioré */
+
+
+body 
+{
+  
+
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  
+  background-size: 400% 400%;
+  
+  animation: gradientBG 15s ease infinite;
+  
+  color: var(--light-color);
+  
+  line-height: 1.6;
+  
+  min-height: 100vh;
+
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* En-tête */
+header {
+  background: rgba(26, 26, 46, 0.9);
+
+  text-align: center;
+
+  position: relative;
+
+  width: 100%;
+
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+
+  padding-bottom: 20px;
+}
+
+header h4 {
+  color: var(--accent-color);
+
+  margin: 0;
+
+  padding: 20px;
+
+  font-size: 1.5rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  margin-top: 20px;
+}
+
+header a 
+{
+
+    padding: 20px;
+
+}
+
+nav a {
+  color: var(--light-color);
+
+  text-decoration: none;
+
+  margin: 0 1rem;
+
+  font-size: 1.1rem;
+
+  transition: all 0.3s ease;
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 4px;
+
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Contenu principal */
+main {
+  padding: 7rem 2rem 2rem;
+
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+
+article, section 
+{
+
+  margin-bottom: 3rem;
+
+}
+
+
+h4 
+{
+  
+  color: var(--accent-color);
+ 
+  margin-top: 0;
+
+}
+
+h2
+{
+  
+  color: var(--accent-color);
+
+  margin-top: 0;
+
+}
+
+h1
+{
+
+  color: var(--accent-color);
+  
+  margin-top: 0;
+
+}
+
+h3
+{
+  
+  color: var(--accent-color);
+  
+  margin-top: 0;
+
+}
+
+h1 
+{
+
+  font-size: 2.5rem;
+  
+  margin-bottom: 1.5rem;
+  
+  position: relative;
+  
+  display: inline-block;
+
+}
+
+h1::after 
+{
+
+  content: '';
+  
+  position: absolute;
+  
+  bottom: -10px;
+  
+  left: 0;
+  
+  width: 100%;
+  
+  height: 3px;
+  
+  background: var(--secondary-color);
+  
+  transform: scaleX(0);
+  
+  transform-origin: right;
+  
+  transition: transform 0.3s ease;
+
+}
+
+h1:hover::after 
+{
+
+  transform: scaleX(1);
+  
+  transform-origin: left;
+
+}
+
+h2 
+{
+
+  font-size: 2rem;
+  
+  margin-bottom: 1rem;
+  
+  padding-bottom: 0.5rem;
+  
+  border-bottom: 2px solid var(--primary-color);
+
+}
+
+h3 
+{
+
+  font-size: 1.5rem;
+  
+  margin-bottom: 1rem;
+
+}
+
+
+p 
+{
+
+  margin-bottom: 1rem;
+  
+  font-size: 1.1rem;
+
+}
+
+
+/* Sections spéciales */
+
+/* Sections spéciales */
+
+.feature, .community-item 
+{
+
+  background: rgba(0, 160, 140, 0.2);
+
+  border: 1px solid var(--primary-color);
+
+  border-radius: 8px;
+
+  padding: 1.5rem;
+
+  margin: 1rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow: var(--shadow);
+}
+
+.feature:hover, .community-item:hover 
+{
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 160, 140, 0.3);
+
+  background: rgba(0, 160, 140, 0.3);
+}
+
+.features, .community 
+{
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+/* Section des capteurs */
+
+.sensor-data
+{
+  background: rgba(26, 26, 46, 0.7);
+
+  border-radius: 8px;
+
+  padding: 2rem;
+
+  margin: 2rem 0;
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid rgba(0, 160, 140, 0.3);
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+.sensor-data table 
+{
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-bottom: 1.5rem;
+}
+
+.sensor-data th, .sensor-data td 
+{
+
+  padding: 1rem;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pied de page */
+
+footer 
+{
+  background: var(--dark-color);
+
+  color: var(--light-color);
+
+  text-align: center;
+
+  padding: 1rem;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) 
+{
+  main 
+  {
+    width: 95%;
+
+    padding: 6rem 1rem 1rem;
+
+    margin-left: 0;
+  }
+  
+  p 
+  {
+
+    padding-left: 0;
+
+  }
+  
+  .sensor-data table
+  {
+    display: block;
+
+    overflow-x: auto;
+  }
+
+}
+
+table
+{
+
+   margin-left: 100px;
+  
+}
+
+tr
+{
+
+  width: 750px;
+  
+}
+
+thead
+{
+
+  width: 750px;
+  
+}
+
+tbody
+{
+
+  width: 750px;
+  
+}
+
+th
+{
+
+  max-width: 400px;
+  
+}
+
+.sensor-data th, .sensor-data td 
+{
+  padding: 1rem;
+
+  text-align: left;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sensor-data th 
+{
+  background: rgba(0, 160, 140, 0.2);
+
+  color: var(--accent-color);
+
+  font-weight: 600;
+
+}
+
+.sensor-data tr:hover
+{
+
+  background: rgba(0, 160, 140, 0.1);
+
+}
+
+.value 
+{
+  font-family: 'Courier New', monospace;
+
+  font-size: 1.1rem;
+
+  color: var(--accent-color);
+
+  font-weight: 600;
+}
+
+.sensor-footer 
+{
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+.refresh-btn 
+{
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.refresh-btn:hover 
+{
+
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+
+}
+
+.auto-refresh 
+{
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  cursor: pointer;
+}
+
+.auto-refresh input
+{
+  width: auto;
+
+  margin: 0;
+}
+
+#timestamp 
+{
+  color: var(--accent-color);
+
+  font-weight: 600;
+}
+
+/* Pied de page */
+
+footer 
+{
+  background: var(--dark-color);
+
+  color: var(--light-color);
+
+  text-align: center;
+
+  width: 1425px;
+
+  margin-top: 3rem;
+}
+
+/* Animations */
+
+@keyframes fadeIn 
+{
+  from { opacity: 0; transform: translateY(20px); }
+
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float 
+{
+  0% { transform: translateY(0px); }
+
+  50% { transform: translateY(-10px); }
+
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) 
+{
+  header 
+  {
+    flex-direction: column;
+
+    padding: 1rem;
+  }
+  
+  nav 
+  {
+    margin-top: 10px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+  
+  nav a 
+  {
+
+    margin: 0.5rem;
+
+  }
+  
+  .features, .community 
+  {
+
+    flex-direction: column;
+
+  }
+  
+  .feature, .community-item 
+  {
+    max-width: 100%;
+
+    margin: 1rem 0;
+  }
+  
+  main 
+  {
+
+    padding: 6rem 1rem 1rem;
+
+  }
+  
+  form 
+  {
+
+    padding: 1rem;
+
+  }
+
+}
+  
+  footer
+  {
+    background-color: #000000;
+
+    text-align: center;
+
+    padding-top: 10px;
+
+    padding-bottom: 10px;
+
+    position: relative;
+
+    bottom: 0;
+
+    width: 100%;
+}
+
+html, body 
+{
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+body 
+{
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+main 
+{
+  flex: 1;
+
+  padding-bottom: 0;
+
+}
+        
+/* Conteneur des features */
+
+.features
+{
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  margin: 2rem 0;
+}
+
+/* Styles pour chaque feature */
+
+.feature 
+{
+  background: rgba(0, 160, 140, 0.2);
+
+  border: 1px solid var(--primary-color);
+
+  border-radius: 8px;
+
+  padding: 1.5rem;
+
+  margin: 0.5rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow: var(--shadow);
+
+  flex: 1;
+
+  min-width: 300px;
+
+  box-sizing: border-box;
+}
+
+.feature:hover 
+{
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 20px rgba(0, 160, 140, 0.3);
+
+  background: rgba(0, 160, 140, 0.3);
+}
+
+/* Responsive pour petits écrans */
+
+@media (max-width: 100%) 
+{
+  .features 
+  {
+
+    flex-direction: column;
+
+  }
+  
+  .feature 
+  {
+    min-width: 100%;
+
+    margin: 0.5rem 0;
+  }
+}
+
+p
+{
+
+  padding-left: 75px;
+  
+}
+
+
+         label 
+         {
+                 
+                    display: block;
+                    
+                    margin-bottom: 10px;
+                    
+                    font-size: 1.1rem;
+                    
+                    color: white;
+                }
+
+                        textarea 
+        {
+    
+                    width: 100%;
+                    
+                    padding: 10px;
+                    
+                    margin-bottom: 20px;
+                    
+                    border: none;
+                    
+                    border-radius: 5px;
+                    
+                    background: rgba(255, 255, 255, 0.1);
+                    
+                    color: #fff;
+                }
+
+
+                /* Style pour le formulaire de contact */
+
+.contact-form-container 
+{
+  background: rgba(26, 26, 46, 0.8);
+
+  border-radius: 15px;
+
+  padding: 2rem;
+
+  margin: 2rem auto;
+
+  max-width: 652px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  border: 1px solid var(--primary-color);
+
+  animation: fadeIn 1s ease-out;
+}
+
+.form-group input,
+
+.form-group select,
+
+.form-group textarea 
+{
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+}
+
+.contact-form-container 
+{
+
+  max-width: 652px;
+
+}
+
+.form-group 
+{
+
+  width: 100%;
+
+}
+
+.form-group input
+{
+  width: 652px;
+
+  padding: 12px 15px 12px 40px;
+
+  border: 2px solid rgba(0, 160, 140, 0.3);
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  color: white;
+
+  font-size: 1rem;
+
+  transition: all 0.3s ease;
+
+}
+
+.contact-form-container h3 
+{
+  color: var(--accent-color);
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+
+  font-size: 1.8rem;
+
+}
+
+.styled-form 
+{
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+.form-group 
+{
+
+  position: relative;
+
+}
+
+.form-group label 
+{
+  display: block;
+
+  margin-bottom: 0.5rem;
+
+  color: var(--light-color);
+
+  font-size: 1.1rem;
+
+  transition: all 0.3s ease;
+}
+
+.form-group textarea 
+{
+
+  width: 100%;
+  
+  padding: 12px 15px 12px 40px;
+  
+  border: 2px solid rgba(0, 160, 140, 0.3);
+  
+  border-radius: 8px;
+  
+  background: rgba(255, 255, 255, 0.05);
+  
+  color: white;
+  
+  font-size: 1rem;
+  
+  transition: all 0.3s ease;
+
+}
+
+.form-group select
+{
+
+  width: 100%;
+  
+  padding: 12px 15px 12px 40px;
+  
+  border: 2px solid rgba(0, 160, 140, 0.3);
+  
+  border-radius: 8px;
+  
+  background: rgba(255, 255, 255, 0.05);
+  
+  color: black;
+  
+  font-size: 1rem;
+  
+  transition: all 0.3s ease;
+
+}
+
+.form-group select 
+{
+  appearance: none;
+
+  -webkit-appearance: none;
+
+  padding-right: 30px;
+
+}
+
+.form-group textarea 
+{
+  padding: 15px;
+
+  min-height: 150px;
+
+  resize: vertical;
+
+}
+
+.form-group input:focus,
+
+.form-group select:focus,
+
+.form-group textarea:focus 
+{
+  outline: none;
+
+  border-color: var(--primary-color);
+
+  box-shadow: 0 0 0 3px rgba(0, 160, 140, 0.2);
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+.input-icon
+{
+  position: absolute;
+
+  left: 15px;
+
+  top: 40px;
+
+  font-size: 1.2rem;
+
+  color: var(--primary-color);
+
+}
+
+.submit-btn
+{
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+
+  color: white;
+
+  border: none;
+
+  padding: 15px 30px;
+
+  border-radius: 8px;
+
+  font-size: 1.1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 1rem;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 4px 15px rgba(0, 160, 140, 0.4);
+
+}
+
+.submit-btn:hover 
+{
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 6px 20px rgba(0, 160, 140, 0.6);
+}
+
+.btn-text 
+{
+
+  transition: all 0.3s ease;
+
+}
+
+.submit-btn:hover .btn-text 
+{
+
+  letter-spacing: 1px;
+
+}
+
+.btn-icon 
+{
+
+  transition: all 0.3s ease;
+
+}
+
+.submit-btn:hover .btn-icon 
+{
+
+  transform: rotate(45deg);
+
+}
+
+     .gallery-item 
+     {
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    }
+    
+    .gallery-item:hover
+    {
+        transform: scale(1.1);
+
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+    }
+    
+    .lightbox.show 
+    {
+        display: flex;
+
+        opacity: 1;
+
+    }
+
+     .feature:hover 
+     {
+        transform: scale(1.05);
+
+        transition: transform 0.3s ease;
+
+    }
+
+     .community-item:hover 
+     {
+        transform: scale(1.05);
+
+        transition: transform 0.3s ease;
+
+    }
+    
+        .gallery 
+    {
+            display: flex;
+
+            justify-content: space-around;
+
+            flex-wrap: wrap;
+
+            margin-top: 40px;
+
+            border: 5px, black;
+
+        }
+        
+        .gallery-item 
+        {
+            width: 30%;
+
+            margin: 10px;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            animation: fadeInUp 2.5s ease;
+
+        }
+
+    .lightbox 
+    {
+        display: none;
+
+        position: fixed;
+
+        top: 0;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.8);
+
+        justify-content: center;
+
+        align-items: center;
+
+        z-index: 1000;
+    }
+    
+    .lightbox.show 
+    {
+        display: flex;
+
+        opacity: 1;
+    }
+    
+    .lightbox-content 
+    {
+        max-width: 150%;
+
+        max-height: 150%;
+
+        z-index: 1001;
+    }
+    
+    .close 
+    {
+        position: absolute;
+
+        top: 20px;
+
+        right: 30px;
+
+        color: white;
+
+        font-size: 50px;
+
+        cursor: pointer;
+
+        z-index: 1002;
+    }
+
+</style> 
+
+<script>
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+
+        if (targetElement) {
+            smoothScroll(targetElement);
+        }
+    });
+});
+
+
+function smoothScroll(target) {
+    const startPosition = window.pageYOffset;
+    const targetPosition = target.getBoundingClientRect().top + startPosition;
+    const distance = targetPosition - startPosition;
+    const duration = 2000;
+    let startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const ease = easeInOutCubic(progress);
+        window.scrollTo(0, startPosition + distance * ease);
+
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+
+
+    requestAnimationFrame(animation);
+}
+function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+
+// Sélectionnez toutes les images de la galerie
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeLightbox = document.querySelector('.close');
+
+// Ajoutez un écouteur d'événements à chaque image
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        lightbox.style.display = 'flex'; // Affiche la lightbox
+        lightboxImg.src = item.src; // Définit l'image de la lightbox
+        document.body.style.overflow = 'hidden'; // Empêche le défilement de la page
+    });
+});
+
+// Fermez la lightbox lorsqu'on clique sur le bouton de fermeture
+
+closeLightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Rétablit le défilement de la page
+
+});
+
+// Fermez la lightbox lorsqu'on clique en dehors de l'image
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+
+    }
+
+});
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+
+            });
+
+        }
+
+    });
+
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('nom').value;
+    const email = document.getElementById('email').value;
+    const destinataire = document.getElementById('destinataire').value;
+    const message = document.getElementById('message').value;
+
+    if (name && email && destinataire && message) {
+        alert('Merci pour votre message ! Nous vous répondrons bientôt :).');
+        this.reset();
+    } else {
+        alert('Veuillez remplir tous les champs :( ! ');
+    }
+});
+function updateSensorData() {
+  if (!document.getElementById('autoRefresh').checked) return;
+  
+  fetch('/data')
+    .then(response => response.json())
+    .then(data => {
+      // Mise à jour du tableau
+      document.getElementById('busVoltage').textContent = data.busVoltage.toFixed(3);
+      document.getElementById('shuntVoltage').textContent = data.shuntVoltage.toFixed(3);
+      document.getElementById('loadVoltage').textContent = data.loadVoltage.toFixed(3);
+      document.getElementById('current').textContent = data.current.toFixed(2);
+      document.getElementById('power').textContent = data.power.toFixed(2);
+      
+      const now = new Date();
+      document.getElementById('timestamp').textContent = now.toLocaleTimeString();
+      
+      // Mise à jour des graphiques
+      updateHistory(data);
+    })
+    .catch(error => {
+      console.error('Erreur de récupération des données:', error);
+      document.getElementById('timestamp').textContent = "Erreur de connexion";
+    });
+}
+
+// Activer/désactiver l'actualisation automatique
+document.getElementById('autoRefresh').addEventListener('change', function() {
+  if (this.checked) {
+    updateSensorData();
+  }
+});
+
+// Actualisation automatique
+setInterval(updateSensorData, 5000);
+updateSensorData(); // Chargement initial
+
+// Variables pour stocker l'historique
+const historySize = 20;
+const voltageHistory = {
+  bus: Array(historySize).fill(0),
+  load: Array(historySize).fill(0),
+  labels: Array(historySize).fill('')
+};
+const currentHistory = Array(historySize).fill(0);
+const powerHistory = Array(historySize).fill(0);
+
+// Fonction pour mettre à jour l'historique
+function updateHistory(data) {
+  // Décalage des données existantes
+  voltageHistory.bus.shift();
+  voltageHistory.load.shift();
+  voltageHistory.labels.shift();
+  currentHistory.shift();
+  powerHistory.shift();
+  
+  // Ajout des nouvelles données
+  const now = new Date();
+  const timeLabel = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+  
+  voltageHistory.bus.push(data.busVoltage);
+  voltageHistory.load.push(data.loadVoltage);
+  voltageHistory.labels.push(timeLabel);
+  currentHistory.push(data.current);
+  powerHistory.push(data.power);
+}
+</script>
+</body>
+</html>
